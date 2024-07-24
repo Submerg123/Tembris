@@ -8,17 +8,20 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.submerg.tembris.Tembris;
+import net.submerg.tembris.block.ModBlocks;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
         DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Tembris.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> TEMBRIS_TAB =CREATIVE_MODE_TABS.register("tembris_tab",
+    public static final RegistryObject<CreativeModeTab> TEMBRIS_TAB = CREATIVE_MODE_TABS.register("tembris_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.TEMBRAL_IRON_INGOT.get()))
                     .title(Component.translatable("creativetab.tembris_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.TEMBRAL_COPPER_INGOT.get());
                         output.accept(ModItems.TEMBRAL_IRON_INGOT.get());
+                        output.accept(ModBlocks.SUNWOOD_LOG.get());
+                        output.accept(ModBlocks.SUNWOOD_WOOD.get());
                     })
                     .build());
 
