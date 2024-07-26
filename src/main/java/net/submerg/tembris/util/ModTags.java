@@ -18,6 +18,7 @@ public class ModTags {
     }
 
     public static class Items {
+        public static final TagKey<Item> SUNWOOD_LOGS = tag("sunwood_logs");
 
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(Tembris.MOD_ID, name));

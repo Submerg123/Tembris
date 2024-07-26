@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube_column",
+  "parent": "minecraft:block/cube_all",
   "textures": {
+    "all": "tembris:block/sunwood_log",
     "end": "tembris:block/sunwood_log_top",
     "side": "tembris:block/sunwood_log"
   }

@@ -19,10 +19,10 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Tembris.MOD_ID);
 
-    public static final RegistryObject<Block> SUNWOOD_LOG = registerBlock("sunwood_log",
+    public static final RegistryObject<RotatedPillarBlock> SUNWOOD_LOG = registerBlock("sunwood_log",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-    public static final RegistryObject<Block> SUNWOOD_WOOD = registerBlock("sunwood_wood",
-        () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<RotatedPillarBlock> SUNWOOD_WOOD = registerBlock("sunwood_wood",
+        () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
     public static final RegistryObject<Block> SUNWOOD_PLANKS = registerBlock("sunwood_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
 
