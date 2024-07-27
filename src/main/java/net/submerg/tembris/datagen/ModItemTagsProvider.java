@@ -3,6 +3,7 @@ package net.submerg.tembris.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.submerg.tembris.Tembris;
@@ -20,7 +21,17 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(ModTags.Items.SUNWOOD_LOGS)
-                .add(ModBlocks.SUNWOOD_LOG.get().asItem(),
-                        ModBlocks.SUNWOOD_WOOD.get().asItem());
+                .add(ModBlocks.DAWNWOOD_LOG.get().asItem(),
+                        ModBlocks.DAWNWOOD_WOOD.get().asItem());
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.DAWNWOOD_LOG.get().asItem(),
+                        ModBlocks.DAWNWOOD_WOOD.get().asItem(),
+                        ModBlocks.STRIPPED_DAWNWOOD_LOG.get().asItem(),
+                        ModBlocks.STRIPPED_DAWNWOOD_WOOD.get().asItem());
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.DAWNWOOD_PLANKS.get().asItem());
+        this.tag(ItemTags.LEAVES)
+                .add(ModBlocks.DAWNWOOD_LEAVES.get().asItem());
     }
 }

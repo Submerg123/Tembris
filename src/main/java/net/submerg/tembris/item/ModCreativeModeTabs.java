@@ -20,10 +20,13 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.TEMBRAL_COPPER_INGOT.get());
                         output.accept(ModItems.TEMBRAL_IRON_INGOT.get());
-                        // TODO double-check proper ordering of wood blocks
-                        output.accept(ModBlocks.SUNWOOD_LOG.get());
-                        output.accept(ModBlocks.SUNWOOD_WOOD.get());
-                        output.accept(ModBlocks.SUNWOOD_PLANKS.get());
+                        
+                        output.accept(ModBlocks.DAWNWOOD_LOG.get());
+                        output.accept(ModBlocks.DAWNWOOD_WOOD.get());
+                        output.accept(ModBlocks.STRIPPED_DAWNWOOD_LOG.get());
+                        output.accept(ModBlocks.STRIPPED_DAWNWOOD_WOOD.get());
+                        output.accept(ModBlocks.DAWNWOOD_PLANKS.get());
+                        output.accept(ModBlocks.DAWNWOOD_LEAVES.get());
                     })
                     .build());
 

@@ -4,13 +4,15 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.submerg.tembris.Tembris;
+import net.submerg.tembris.block.custom.ModLeavesBlock;
+import net.submerg.tembris.block.custom.PlanksBlock;
+import net.submerg.tembris.block.custom.WoodLikeBlock;
 import net.submerg.tembris.item.ModItems;
 
 import java.util.function.Supplier;
@@ -19,12 +21,20 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Tembris.MOD_ID);
 
-    public static final RegistryObject<RotatedPillarBlock> SUNWOOD_LOG = registerBlock("sunwood_log",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-    public static final RegistryObject<RotatedPillarBlock> SUNWOOD_WOOD = registerBlock("sunwood_wood",
-        () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
-    public static final RegistryObject<Block> SUNWOOD_PLANKS = registerBlock("sunwood_planks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> DAWNWOOD_LOG = registerBlock("dawnwood_log",
+            () -> new WoodLikeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> DAWNWOOD_WOOD = registerBlock("dawnwood_wood",
+            () -> new WoodLikeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_DAWNWOOD_LOG = registerBlock("stripped_dawnwood_log",
+            () -> new WoodLikeBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_DAWNWOOD_WOOD = registerBlock("stripped_dawnwood_wood",
+            () -> new WoodLikeBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> DAWNWOOD_PLANKS = registerBlock("dawnwood_planks",
+            () -> new PlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> DAWNWOOD_LEAVES = registerBlock("dawnwood_leaves",
+            () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
+// TODO add dawnstone
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

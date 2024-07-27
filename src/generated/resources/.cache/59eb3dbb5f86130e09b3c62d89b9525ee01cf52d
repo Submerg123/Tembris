@@ -1,4 +1,7 @@
-// 1.20.1	2024-07-25T20:41:43.4255131	Loot Tables
-b93f5952f1fb829f5284415899c8e60000746430 data/tembris/loot_tables/blocks/sunwood_log.json
-6664b94385890adecef0ec45df703ce839320a9b data/tembris/loot_tables/blocks/sunwood_planks.json
-d52158b87311965eb189a12bcb1290020089fed7 data/tembris/loot_tables/blocks/sunwood_wood.json
+// 1.20.1	2024-07-27T13:58:41.1956129	Loot Tables
+c00317777e6a9961671cb4789ee86ad05af470c5 data/tembris/loot_tables/blocks/dawnwood_leaves.json
+6e02e9b6ec7b206ce3018272ab93dcba65de74fe data/tembris/loot_tables/blocks/dawnwood_log.json
+f0d21558958062fe200309d29234f63155d4e0ea data/tembris/loot_tables/blocks/dawnwood_planks.json
+7637e7a3ff325cf77937d8d3a4d2193ba84b0711 data/tembris/loot_tables/blocks/dawnwood_wood.json
+0a6d26ddf83abe3de195354577976c014521bf0d data/tembris/loot_tables/blocks/stripped_dawnwood_log.json
+6ca70c732627881e7d0e23f3fed9a8c78c80c2e2 data/tembris/loot_tables/blocks/stripped_dawnwood_wood.json

@@ -1,5 +1,7 @@
-// 1.20.1	2024-07-25T20:41:43.4275243	Recipes
-acdd59c34861917a3a613a6680eabb207a52a3bc data/tembris/advancements/recipes/building_blocks/sunwood_planks.json
-97e61bdf5ddf3303b0e244e7d916670d65f55c83 data/tembris/advancements/recipes/building_blocks/sunwood_wood.json
-65598a2de324e2dbdb5a64039ceb2da7c48c6021 data/tembris/recipes/sunwood_planks.json
-3654e9b0fdd10697813aa37c0e8f34acf15c5166 data/tembris/recipes/sunwood_wood.json
+// 1.20.1	2024-07-27T13:58:41.1956129	Recipes
+e7a1c96cbf90cd799faea9eeb593a5d3ecf0fae4 data/tembris/advancements/recipes/building_blocks/dawnwood_planks.json
+d238f4a35803e9bd1a9b3539452c1d2a84d9ab1d data/tembris/advancements/recipes/building_blocks/dawnwood_wood.json
+4d514f0b7a08016eddfe01abec7bfbf90d6197e6 data/tembris/advancements/recipes/building_blocks/stripped_dawnwood_wood.json
+2b2d83381031a9754b2719c270583ab5b7bbe947 data/tembris/recipes/dawnwood_planks.json
+c3add4e21ef1f21c6e6065cf878416852077d235 data/tembris/recipes/dawnwood_wood.json
+d831f3df2a62245d7bd5f02b788e4a047292fc04 data/tembris/recipes/stripped_dawnwood_wood.json

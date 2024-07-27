@@ -2,6 +2,7 @@ package net.submerg.tembris.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.submerg.tembris.Tembris;
@@ -19,7 +20,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(ModTags.Blocks.SUNWOOD_LOGS)
-                .add(ModBlocks.SUNWOOD_LOG.get(),
-                        ModBlocks.SUNWOOD_WOOD.get());
+                .add(ModBlocks.DAWNWOOD_LOG.get(),
+                        ModBlocks.DAWNWOOD_WOOD.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.DAWNWOOD_LOG.get(),
+                        ModBlocks.DAWNWOOD_WOOD.get(),
+                        ModBlocks.STRIPPED_DAWNWOOD_LOG.get(),
+                        ModBlocks.STRIPPED_DAWNWOOD_WOOD.get());
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.DAWNWOOD_PLANKS.get());
+        this.tag(BlockTags.LEAVES)
+                .add(ModBlocks.DAWNWOOD_LEAVES.get());
     }
 }

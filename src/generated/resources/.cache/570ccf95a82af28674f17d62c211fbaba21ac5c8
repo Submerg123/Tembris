@@ -1,2 +1,5 @@
-// 1.20.1	2024-07-25T20:41:43.4229336	Tags for minecraft:item mod id tembris
-2bfefa8f4e2e97ce3217eaf7fa817582649e443d data/tembris/tags/items/sunwood_logs.json
+// 1.20.1	2024-07-27T13:58:41.1951038	Tags for minecraft:item mod id tembris
+99ed8c8f30dc81275124865ffe216450c1300de5 data/minecraft/tags/items/leaves.json
+8e4fdef736d1aae89f3f3416819bf0d1ecbff84d data/minecraft/tags/items/logs_that_burn.json
+a66e06f5cfb9e069ca9f3ca6a5424ef8e523a0bc data/minecraft/tags/items/planks.json
+f913ef0b48b746f37b2bf45d69d51ae613611bd9 data/tembris/tags/items/sunwood_logs.json

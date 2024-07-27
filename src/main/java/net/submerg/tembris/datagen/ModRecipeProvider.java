@@ -17,7 +17,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(@NotNull Consumer<FinishedRecipe> consumer) {
-        planksFromLogs(consumer, ModBlocks.SUNWOOD_PLANKS.get(), ModTags.Items.SUNWOOD_LOGS, 4);
-        woodFromLogs(consumer, ModBlocks.SUNWOOD_WOOD.get(), ModBlocks.SUNWOOD_LOG.get());
+        planksFromLogs(consumer, ModBlocks.DAWNWOOD_PLANKS.get(), ModTags.Items.SUNWOOD_LOGS, 4);
+        woodFromLogs(consumer, ModBlocks.DAWNWOOD_WOOD.get(), ModBlocks.DAWNWOOD_LOG.get());
+        woodFromLogs(consumer, ModBlocks.STRIPPED_DAWNWOOD_WOOD.get(), ModBlocks.STRIPPED_DAWNWOOD_LOG.get());
     }
 }

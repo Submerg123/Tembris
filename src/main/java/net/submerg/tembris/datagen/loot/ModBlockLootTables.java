@@ -1,9 +1,7 @@
 package net.submerg.tembris.datagen.loot;
 
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 import net.submerg.tembris.block.ModBlocks;
@@ -18,9 +16,14 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        this.dropSelf(ModBlocks.SUNWOOD_LOG.get());
-        this.dropSelf(ModBlocks.SUNWOOD_WOOD.get());
-        this.dropSelf(ModBlocks.SUNWOOD_PLANKS.get());
+        this.dropSelf(ModBlocks.DAWNWOOD_LOG.get());
+        this.dropSelf(ModBlocks.DAWNWOOD_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_DAWNWOOD_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_DAWNWOOD_WOOD.get());
+        this.dropSelf(ModBlocks.DAWNWOOD_PLANKS.get());
+
+        this.add(ModBlocks.DAWNWOOD_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.DAWNWOOD_LOG.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO change to `sunwood_sapling`
     }
 
     @Override

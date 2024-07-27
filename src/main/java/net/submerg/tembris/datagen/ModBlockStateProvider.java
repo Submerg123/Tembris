@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.submerg.tembris.Tembris;
 import net.submerg.tembris.block.ModBlocks;
 
@@ -18,26 +18,38 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        logBlockWithItem(ModBlocks.SUNWOOD_LOG);
-        woodBlockWithItem(ModBlocks.SUNWOOD_WOOD, ModBlocks.SUNWOOD_LOG);
-        blockWithItem(ModBlocks.SUNWOOD_PLANKS);
+        logBlockWithItem(((RotatedPillarBlock) ModBlocks.DAWNWOOD_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.DAWNWOOD_WOOD.get()), blockTexture(ModBlocks.DAWNWOOD_LOG.get()),
+                blockTexture(ModBlocks.DAWNWOOD_LOG.get()));
+        blockItem(ModBlocks.DAWNWOOD_WOOD.get());
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_DAWNWOOD_LOG.get()), blockTexture(ModBlocks.STRIPPED_DAWNWOOD_LOG.get()),
+                new ResourceLocation(Tembris.MOD_ID, "block/" + ModBlocks.STRIPPED_DAWNWOOD_LOG.getId().getPath() + "_top"));
+        blockItem(ModBlocks.STRIPPED_DAWNWOOD_LOG.get());
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_DAWNWOOD_WOOD.get()), blockTexture(ModBlocks.STRIPPED_DAWNWOOD_LOG.get()),
+                blockTexture(ModBlocks.STRIPPED_DAWNWOOD_LOG.get()));
+        blockItem(ModBlocks.STRIPPED_DAWNWOOD_WOOD.get());
+        blockWithItem(ModBlocks.DAWNWOOD_PLANKS.get());
+        leavesBlock(ModBlocks.DAWNWOOD_LEAVES.get());
     }
 
-    private void blockWithItem(RegistryObject<Block> block) {
-        simpleBlockWithItem(block.get(), cubeAll(block.get()));
+    private void blockItem(Block block) {
+        simpleBlockItem(block, new ModelFile.UncheckedModelFile(Tembris.MOD_ID +
+                ":block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
     }
 
-    private void logBlockWithItem(RegistryObject<RotatedPillarBlock> block) {
-        logBlock(block.get());
-        simpleBlockItem(block.get(), cubeAll(block.get()));
+    private void blockWithItem(Block block) {
+        simpleBlockWithItem(block, cubeAll(block));
     }
 
-    private void woodBlockWithItem(RegistryObject<RotatedPillarBlock> wood, RegistryObject<RotatedPillarBlock> log) {
-        ResourceLocation logName = log.getKey().location();
-        ResourceLocation texture = new ResourceLocation(logName.getNamespace(), "block/" + logName.getPath());
-        ModelFile model = models().cubeColumn(wood.getKey().location().getPath(),
-                texture, texture);
-        axisBlock(wood.get(), model, model);
-        simpleBlockItem(wood.get(), model);
+    private void logBlockWithItem(RotatedPillarBlock block) {
+        logBlock(block);
+        blockItem(block);
+    }
+
+    private void leavesBlock(Block block) {
+        simpleBlockWithItem(block,
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(block).getPath(),
+                        new ResourceLocation("minecraft:block/leaves"),
+                        "all", blockTexture(block)).renderType("cutout"));
     }
 }
