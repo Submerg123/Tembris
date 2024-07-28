@@ -14,5 +14,6 @@
   "item.tembris.tembral_iron_ingot": "Tembral Iron Ingot",
 
   "tooltip.tembris.property.absorbent": "Absorbent",
-  "tooltip.tembris.property.max_throughput": "Max. Throughput"
+  "tooltip.tembris.property.max_throughput": "Max. Throughput",
+  "tooltip.tembris.property.max_capacity": "Max. Capacity"
 }

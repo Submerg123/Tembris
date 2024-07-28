@@ -18,7 +18,8 @@ public class TembraturgicalMaterial {
             Map.entry(10e-21, "z"), Map.entry(10e-24, "y"), Map.entry(10e-27, "r"),
             Map.entry(10e-30, "q"));
     public static final Map<String, PropertyDef<?>> PROPERTY_DEFS = Map.ofEntries(
+            Map.entry("absorbent", new BooleanPropertyDef("absorbent")),
             Map.entry("max_throughput", new NumericPropertyDef<Double>("max_throughput", Component.literal("W"))),
-            Map.entry("absorbent", new BooleanPropertyDef("absorbent"))
+            Map.entry("max_capacity", new NumericPropertyDef<Double>("max_capacity", Component.literal("J")))
     );
 }

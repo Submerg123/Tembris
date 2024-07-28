@@ -32,16 +32,6 @@ public abstract class TembraturgicalMaterialBlock extends Block {
 
         super.appendHoverText(itemStack, level, tooltip, isAdvanced);
     }
-//    public List<Component> appendHoverText(@NotNull List<Component> tooltip) {
-//        PROPERTIES.forEach(pair -> {
-//            String property = pair.getA();
-//            Object value = pair.getB();
-//            PropertyDef<?> propertyDef = TembraturgicalMaterial.PROPERTY_DEFS.get(property);
-//            tooltip.addAll(propertyDef.makeTooltip(value));
-//        });
-//
-//        return tooltip;
-//    }
 
     //    public static class KeywordPropertyDef extends PropertyDef {
 //        public final String[] values;

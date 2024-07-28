@@ -10,14 +10,14 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import oshi.util.tuples.Pair;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class DawnstoneBlock extends AbsorbentBlock {
-    public final List<Pair<String, ?>> PROPERTIES = List.of(
-            new Pair<>("absorbent", true),
-            new Pair<>("max_throughput", 10d)
+    public final Map<String, ?> PROPERTIES = Map.ofEntries(
+            Map.entry("absorbent", true),
+            Map.entry("max_throughput", 10d),
+            Map.entry("max_capacity", 10d)
     );
 
 
@@ -28,9 +28,7 @@ public class DawnstoneBlock extends AbsorbentBlock {
     @Override
     public void appendHoverText(@NotNull ItemStack itemStack, @Nullable BlockGetter level,
                                 @NotNull List<Component> tooltip, @NotNull TooltipFlag isAdvanced) {
-        this.PROPERTIES.forEach(pair -> {
-            String property = pair.getA();
-            Object value = pair.getB();
+        this.PROPERTIES.forEach((property, value) -> {
             PropertyDef<?> propertyDef = TembraturgicalMaterial.PROPERTY_DEFS.get(property);
             tooltip.add(propertyDef.makeTooltip(value));
         });
