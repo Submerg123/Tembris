@@ -1,16 +1,18 @@
 {
-  "item.tembris.tembral_copper_ingot": "Tembral Copper Ingot",
-  "item.tembris.tembral_iron_ingot": "Tembral Iron Ingot",
-
+  "block.tembris.cobbled_dawnstone": "Cobbled Dawnstone",
+  "block.tembris.dawnstone": "Dawnstone",
+  "block.tembris.dawnwood_leaves": "Dawnwood Leaves",
   "block.tembris.dawnwood_log": "Dawnwood Log",
+  "block.tembris.dawnwood_planks": "Dawnwood Planks",
   "block.tembris.dawnwood_wood": "Dawnwood Wood",
   "block.tembris.stripped_dawnwood_log": "Stripped Dawnwood Log",
   "block.tembris.stripped_dawnwood_wood": "Stripped Dawnwood Wood",
-  "block.tembris.dawnwood_planks": "Dawnwood Planks",
-  "block.tembris.dawnwood_leaves": "Dawnwood Leaves",
 
-  "block.tembris.dawnstone": "Dawnstone",
-  "block.tembris.cobbled_dawnstone": "Cobbled Dawnstone",
+  "creativetab.tembris_tab": "Tembris",
 
-  "creativetab.tembris_tab": "Tembris"
+  "item.tembris.tembral_copper_ingot": "Tembral Copper Ingot",
+  "item.tembris.tembral_iron_ingot": "Tembral Iron Ingot",
+
+  "tooltip.tembris.property.absorbent": "Absorbent",
+  "tooltip.tembris.property.max_throughput": "Max. Throughput"
 }
