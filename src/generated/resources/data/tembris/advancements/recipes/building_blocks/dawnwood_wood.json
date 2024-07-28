@@ -1,11 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_logs": {
+    "has_log": {
       "conditions": {
         "items": [
           {
-            "tag": "tembris:sunwood_logs"
+            "items": [
+              "tembris:dawnwood_log"
+            ]
           }
         ]
       },
@@ -13,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tembris:sunwood_planks"
+        "recipe": "tembris:dawnwood_wood"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_logs",
+      "has_log",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "tembris:sunwood_planks"
+      "tembris:dawnwood_wood"
     ]
   },
   "sends_telemetry_event": false

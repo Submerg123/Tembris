@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tembris:stripped_dawnwood_log"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "tembris:blocks/stripped_dawnwood_log"
+}

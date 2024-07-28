@@ -1,10 +1,14 @@
-// 1.20.1	2024-07-27T13:58:41.1930995	Block States: tembris
+// 1.20.1	2024-07-27T20:33:30.4862979	Block States: tembris
+484c52cfc6fe00b45fc93e97ddb7c936e75bfef2 assets/tembris/blockstates/cobbled_dawnstone.json
+15d3f73bc34426a875ab4b23626fa46b7ff29abe assets/tembris/blockstates/dawnstone.json
 c16f8853d0b3adcac01930932453698d481dde71 assets/tembris/blockstates/dawnwood_leaves.json
 458ebc4697908d3e1395a15ccbd513b3ca8a09ed assets/tembris/blockstates/dawnwood_log.json
 3d522c3328b6b9736a242a204e107366615e8a1c assets/tembris/blockstates/dawnwood_planks.json
 3f5e51a57d4ae9443d1ad04ceac8cd386c1b456f assets/tembris/blockstates/dawnwood_wood.json
 c148f40a14bffe317e0def2aeee2405b3b5ec711 assets/tembris/blockstates/stripped_dawnwood_log.json
 eb08fe3578c240f2e7bc1901fb06d7e9702b13b8 assets/tembris/blockstates/stripped_dawnwood_wood.json
+dbaa8baa04c7b2efb953402ff2d989713b3ae6f1 assets/tembris/models/block/cobbled_dawnstone.json
+0133d13988b376dae033b260b53a72f80a91184f assets/tembris/models/block/dawnstone.json
 8cb801c9450488f4819a41739b72446960054b9f assets/tembris/models/block/dawnwood_leaves.json
 81102ebb9f88f9da1b59eef6d02c022452b7fcad assets/tembris/models/block/dawnwood_log.json
 a1e74a88fb45023911c93844ce94ba46525d3e6d assets/tembris/models/block/dawnwood_log_horizontal.json
@@ -15,6 +19,8 @@ bf1381ba6689bd0ed50022aa0166ec0ff2e8b97d assets/tembris/models/block/dawnwood_wo
 0d925cb4e33f8e5eecacf0886c8d98e40cdc3b47 assets/tembris/models/block/stripped_dawnwood_log_horizontal.json
 dee26fba18299a8ba937c1520332059837b13e42 assets/tembris/models/block/stripped_dawnwood_wood.json
 33edc2bcb3f395e4b8043048bd166f02f1776546 assets/tembris/models/block/stripped_dawnwood_wood_horizontal.json
+37c10f78d02ea22132ae7545217f9b25eee81a6e assets/tembris/models/item/cobbled_dawnstone.json
+8ac9dc90bf6c6cc56b6a7d474ab1248f86beab1d assets/tembris/models/item/dawnstone.json
 04e1f9725716cd5d232f0ea2ca3c542ca6976260 assets/tembris/models/item/dawnwood_leaves.json
 4f3c2b788e2b0edb0dc30cd8ee89c0b38e511e4e assets/tembris/models/item/dawnwood_log.json
 8eec5cd7b657cdbea7ac0ba20a1a9a57c9504297 assets/tembris/models/item/dawnwood_planks.json

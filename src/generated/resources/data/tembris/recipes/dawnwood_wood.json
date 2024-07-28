@@ -4,7 +4,7 @@
   "group": "bark",
   "key": {
     "#": {
-      "item": "tembris:sunwood_log"
+      "item": "tembris:dawnwood_log"
     }
   },
   "pattern": [
@@ -13,7 +13,7 @@
   ],
   "result": {
     "count": 3,
-    "item": "tembris:sunwood_wood"
+    "item": "tembris:dawnwood_wood"
   },
   "show_notification": true
 }

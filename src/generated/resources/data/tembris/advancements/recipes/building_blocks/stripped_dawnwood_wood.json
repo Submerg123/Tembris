@@ -6,7 +6,7 @@
         "items": [
           {
             "items": [
-              "tembris:sunwood_log"
+              "tembris:stripped_dawnwood_log"
             ]
           }
         ]
@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tembris:sunwood_wood"
+        "recipe": "tembris:stripped_dawnwood_wood"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "tembris:sunwood_wood"
+      "tembris:stripped_dawnwood_wood"
     ]
   },
   "sends_telemetry_event": false

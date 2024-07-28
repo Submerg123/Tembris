@@ -15,20 +15,22 @@ import java.util.concurrent.CompletableFuture;
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
-        DataGenerator gen = event.getGenerator();
-        PackOutput pOutput = gen.getPackOutput();
+        DataGenerator generator = event.getGenerator();
+        PackOutput pOutput = generator.getPackOutput();
         ExistingFileHelper existingFH = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        gen.addProvider(event.includeServer(), new ModRecipeProvider(pOutput));
-        gen.addProvider(event.includeServer(), ModLootTableProvider.create(pOutput));
+        generator.addProvider(event.includeServer(), new ModRecipeProvider(pOutput));
+        generator.addProvider(event.includeServer(), ModLootTableProvider.create(pOutput));
 
-        gen.addProvider(event.includeClient(), new ModBlockStateProvider(pOutput, existingFH));
-        gen.addProvider(event.includeClient(), new ModItemModelProvider(pOutput, existingFH));
+        generator.addProvider(event.includeClient(), new ModBlockStateProvider(pOutput, existingFH));
+        generator.addProvider(event.includeClient(), new ModItemModelProvider(pOutput, existingFH));
 
-        ModBlockTagsProvider blockTagsProvider = gen.addProvider(event.includeServer(),
+        ModBlockTagsProvider blockTagsProvider = generator.addProvider(event.includeServer(),
                 new ModBlockTagsProvider(pOutput, lookupProvider, existingFH));
-        gen.addProvider(event.includeServer(), new ModItemTagsProvider(pOutput, lookupProvider,
+        generator.addProvider(event.includeServer(), new ModItemTagsProvider(pOutput, lookupProvider,
                 blockTagsProvider.contentsGetter(), existingFH));
+
+        generator.addProvider(event.includeServer(), new ModWorldgenProvider(pOutput, lookupProvider));
     }
 }

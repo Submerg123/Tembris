@@ -1,4 +1,6 @@
-// 1.20.1	2024-07-27T13:58:41.1956129	Loot Tables
+// 1.20.1	2024-07-27T20:33:30.4883549	Loot Tables
+bf672a1a593e5f6a5b4f450512946672d4b2536a data/tembris/loot_tables/blocks/cobbled_dawnstone.json
+57f633aeab64567896072c926ca142de6b6c4dcf data/tembris/loot_tables/blocks/dawnstone.json
 c00317777e6a9961671cb4789ee86ad05af470c5 data/tembris/loot_tables/blocks/dawnwood_leaves.json
 6e02e9b6ec7b206ce3018272ab93dcba65de74fe data/tembris/loot_tables/blocks/dawnwood_log.json
 f0d21558958062fe200309d29234f63155d4e0ea data/tembris/loot_tables/blocks/dawnwood_planks.json

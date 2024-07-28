@@ -21,9 +21,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_DAWNWOOD_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_DAWNWOOD_WOOD.get());
         this.dropSelf(ModBlocks.DAWNWOOD_PLANKS.get());
-
         this.add(ModBlocks.DAWNWOOD_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.DAWNWOOD_LOG.get(), NORMAL_LEAVES_SAPLING_CHANCES)); // TODO change to `sunwood_sapling`
+
+        this.dropOther(ModBlocks.DAWNSTONE.get(), ModBlocks.COBBLED_DAWNSTONE.get());
+        this.dropSelf(ModBlocks.COBBLED_DAWNSTONE.get());
     }
 
     @Override

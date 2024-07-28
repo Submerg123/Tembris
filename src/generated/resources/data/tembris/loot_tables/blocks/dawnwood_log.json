@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tembris:sunwood_wood"
+          "name": "tembris:dawnwood_log"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "tembris:blocks/sunwood_wood"
+  "random_sequence": "tembris:blocks/dawnwood_log"
 }

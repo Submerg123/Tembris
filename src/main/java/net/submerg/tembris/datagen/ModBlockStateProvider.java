@@ -18,6 +18,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        /*=======
+         Dawnwood
+         =======*/
         logBlockWithItem(((RotatedPillarBlock) ModBlocks.DAWNWOOD_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.DAWNWOOD_WOOD.get()), blockTexture(ModBlocks.DAWNWOOD_LOG.get()),
                 blockTexture(ModBlocks.DAWNWOOD_LOG.get()));
@@ -30,6 +33,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_DAWNWOOD_WOOD.get());
         blockWithItem(ModBlocks.DAWNWOOD_PLANKS.get());
         leavesBlock(ModBlocks.DAWNWOOD_LEAVES.get());
+        /*========
+         Dawnstone
+         ========*/
+        blockWithItem(ModBlocks.DAWNSTONE.get());
+        blockWithItem(ModBlocks.COBBLED_DAWNSTONE.get());
     }
 
     private void blockItem(Block block) {

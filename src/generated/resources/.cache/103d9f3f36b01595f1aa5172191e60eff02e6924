@@ -1,0 +1,5 @@
+// 1.20.1	2024-07-27T20:54:29.8213527	Registries
+1294f41bef7a1c698f19272df7a3dc55e8286db6 data/tembris/forge/biome_modifier/add_dawnstone.json
+96006d0a07c2f2e1aff7d160f4c36d5d3aa59b0d data/tembris/worldgen/configured_feature/ore_dawnstone.json
+75b14e77659e13d7afac034abd55d1332f9a8d2e data/tembris/worldgen/placed_feature/ore_dawnstone_lower.json
+e83f09544ff57773ce2ce5474763b9648f5f756f data/tembris/worldgen/placed_feature/ore_dawnstone_upper.json
