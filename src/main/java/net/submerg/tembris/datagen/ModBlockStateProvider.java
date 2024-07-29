@@ -8,12 +8,16 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import net.submerg.tembris.Tembris;
 import net.submerg.tembris.block.ModBlocks;
 
 public class ModBlockStateProvider extends BlockStateProvider {
+    private final ExistingFileHelper EXISTING_FILE_HELPER;
+
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Tembris.MOD_ID, exFileHelper);
+        this.EXISTING_FILE_HELPER = exFileHelper;
     }
 
     @Override
@@ -33,11 +37,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_DAWNWOOD_WOOD.get());
         blockWithItem(ModBlocks.DAWNWOOD_PLANKS.get());
         leavesBlock(ModBlocks.DAWNWOOD_LEAVES.get());
+        saplingBlock(ModBlocks.DAWNWOOD_SAPLING.get());
         /*========
          Dawnstone
          ========*/
         blockWithItem(ModBlocks.DAWNSTONE.get());
         blockWithItem(ModBlocks.COBBLED_DAWNSTONE.get());
+
+        simpleBlockWithItem(ModBlocks.ACCUMULATOR.get(),
+                new ModelFile.ExistingModelFile(new ResourceLocation(Tembris.MOD_ID, "block/accumulator"),
+                        EXISTING_FILE_HELPER));
+    }
+
+    private void saplingBlock(Block block) {
+        simpleBlock(block, models().cross(ForgeRegistries.BLOCKS.getKey(block).getPath(),
+                        blockTexture(block)).renderType("cutout"));
     }
 
     private void blockItem(Block block) {

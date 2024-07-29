@@ -11,12 +11,11 @@ import org.jetbrains.annotations.Nullable;
 import oshi.util.tuples.Pair;
 
 import java.util.List;
-import java.util.Map;
 
-public abstract class TembraturgicalMaterialBlock extends Block {
+public abstract class PropertyBlock extends Block {
     public final List<Pair<String, ?>> PROPERTIES = List.of();
 
-    public TembraturgicalMaterialBlock(Properties pProperties) {
+    public PropertyBlock(Properties pProperties) {
         super(pProperties);
     }
 
@@ -26,7 +25,7 @@ public abstract class TembraturgicalMaterialBlock extends Block {
         this.PROPERTIES.forEach(pair -> {
             String property = pair.getA();
             Object value = pair.getB();
-            PropertyDef<?> propertyDef = TembraturgicalMaterial.PROPERTY_DEFS.get(property);
+            PropertyDef<?> propertyDef = PropertyMaterial.PROPERTY_DEFS.get(property);
             tooltip.add(propertyDef.makeTooltip(value));
         });
 

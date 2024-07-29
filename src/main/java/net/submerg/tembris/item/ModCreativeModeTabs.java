@@ -27,9 +27,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_DAWNWOOD_WOOD.get());
                         output.accept(ModBlocks.DAWNWOOD_PLANKS.get());
                         output.accept(ModBlocks.DAWNWOOD_LEAVES.get());
+                        output.accept(ModBlocks.DAWNWOOD_SAPLING.get());
 
                         output.accept(ModBlocks.DAWNSTONE.get());
                         output.accept(ModBlocks.COBBLED_DAWNSTONE.get());
+
+                        output.accept(ModBlocks.ACCUMULATOR.get());
                     })
                     .build());
 

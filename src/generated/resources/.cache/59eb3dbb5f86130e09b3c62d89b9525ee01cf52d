@@ -1,9 +1,11 @@
-// 1.20.1	2024-07-27T20:33:30.4883549	Loot Tables
+// 1.20.1	2024-07-29T06:58:01.8532769	Loot Tables
+cc550e5545862dcfa6591de2200f5504661d9352 data/tembris/loot_tables/blocks/accumulator.json
 bf672a1a593e5f6a5b4f450512946672d4b2536a data/tembris/loot_tables/blocks/cobbled_dawnstone.json
 57f633aeab64567896072c926ca142de6b6c4dcf data/tembris/loot_tables/blocks/dawnstone.json
-c00317777e6a9961671cb4789ee86ad05af470c5 data/tembris/loot_tables/blocks/dawnwood_leaves.json
+68f4916fa783bd13ec7b76fd128f662845676acc data/tembris/loot_tables/blocks/dawnwood_leaves.json
 6e02e9b6ec7b206ce3018272ab93dcba65de74fe data/tembris/loot_tables/blocks/dawnwood_log.json
 f0d21558958062fe200309d29234f63155d4e0ea data/tembris/loot_tables/blocks/dawnwood_planks.json
+9e6057abcac75cef4e91298c732050cb06e763e8 data/tembris/loot_tables/blocks/dawnwood_sapling.json
 7637e7a3ff325cf77937d8d3a4d2193ba84b0711 data/tembris/loot_tables/blocks/dawnwood_wood.json
 0a6d26ddf83abe3de195354577976c014521bf0d data/tembris/loot_tables/blocks/stripped_dawnwood_log.json
 6ca70c732627881e7d0e23f3fed9a8c78c80c2e2 data/tembris/loot_tables/blocks/stripped_dawnwood_wood.json

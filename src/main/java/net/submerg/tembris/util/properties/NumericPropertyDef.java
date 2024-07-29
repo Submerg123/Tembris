@@ -17,7 +17,7 @@ public class NumericPropertyDef<N extends Number> extends PropertyDef<N> {
         super(name);
 
         this.symbol = symbol;
-        this.scalingSystem = TembraturgicalMaterial.SI_SCALING_SYSTEM;
+        this.scalingSystem = PropertyMaterial.SI_SCALING_SYSTEM;
     }
 
     @Override

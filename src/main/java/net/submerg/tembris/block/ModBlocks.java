@@ -4,17 +4,16 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.submerg.tembris.Tembris;
-import net.submerg.tembris.block.custom.DawnstoneBlock;
-import net.submerg.tembris.block.custom.ModLeavesBlock;
-import net.submerg.tembris.block.custom.PlanksBlock;
-import net.submerg.tembris.block.custom.WoodLikeBlock;
+import net.submerg.tembris.block.custom.*;
 import net.submerg.tembris.item.ModItems;
+import net.submerg.tembris.worldgen.tree.DawnwoodTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -37,12 +36,17 @@ public class ModBlocks {
             () -> new PlanksBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> DAWNWOOD_LEAVES = registerBlock("dawnwood_leaves",
             () -> new ModLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> DAWNWOOD_SAPLING = registerBlock("dawnwood_sapling",
+            () -> new SaplingBlock(new DawnwoodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     // TODO add dawnstone decorative blocks
     public static final RegistryObject<Block> DAWNSTONE = registerBlock("dawnstone",
         () -> new DawnstoneBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> COBBLED_DAWNSTONE = registerBlock("cobbled_dawnstone",
         () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
+    // Machines
+    public static final RegistryObject<Block> ACCUMULATOR = registerBlock("accumulator",
+            () -> new AccumulatorBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -4,7 +4,7 @@ import net.minecraft.network.chat.Component;
 
 import java.util.Map;
 
-public class TembraturgicalMaterial {
+public class PropertyMaterial {
     public static final PrefixScalingSystem<Double> SI_SCALING_SYSTEM = new PrefixScalingSystem<>(
             Map.entry(10e12, "T"), Map.entry(10e9, "G"), Map.entry(10e6, "M"),
             Map.entry(10e3, "k"), Map.entry(1d, ""), Map.entry(10e-3, "m"),
@@ -18,7 +18,7 @@ public class TembraturgicalMaterial {
             Map.entry(10e-21, "z"), Map.entry(10e-24, "y"), Map.entry(10e-27, "r"),
             Map.entry(10e-30, "q"));
     public static final Map<String, PropertyDef<?>> PROPERTY_DEFS = Map.ofEntries(
-            Map.entry("absorbent", new BooleanPropertyDef("absorbent")),
+            Map.entry("amb_accumulation", new NumericPropertyDef<Double>("amb_accumulation", Component.literal("W"))),
             Map.entry("max_throughput", new NumericPropertyDef<Double>("max_throughput", Component.literal("W"))),
             Map.entry("max_capacity", new NumericPropertyDef<Double>("max_capacity", Component.literal("J")))
     );

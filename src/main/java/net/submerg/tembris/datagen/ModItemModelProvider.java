@@ -3,11 +3,13 @@ package net.submerg.tembris.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.submerg.tembris.Tembris;
+import net.submerg.tembris.block.ModBlocks;
 import net.submerg.tembris.item.ModItems;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -19,11 +21,18 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.TEMBRAL_IRON_INGOT);
         simpleItem(ModItems.TEMBRAL_COPPER_INGOT);
+        saplingItem(ModBlocks.DAWNWOOD_SAPLING);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Tembris.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> block) {
+        return withExistingParent(block.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Tembris.MOD_ID, "block/" + block.getId().getPath()));
     }
 }

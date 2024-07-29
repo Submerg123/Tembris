@@ -5,10 +5,16 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import net.submerg.tembris.Tembris;
@@ -17,11 +23,20 @@ import net.submerg.tembris.block.ModBlocks;
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_DAWNSTONE = registerKey("ore_dawnstone");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DAWNWOOD = registerKey("dawnwood");
+
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest baseStone = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
 
         register(context, ORE_DAWNSTONE, Feature.ORE, new OreConfiguration(baseStone,
                 ModBlocks.DAWNSTONE.get().defaultBlockState(), 32));
+
+        register(context, DAWNWOOD, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.DAWNWOOD_LOG.get()),
+                new StraightTrunkPlacer(5, 4, 3),
+                BlockStateProvider.simple(ModBlocks.DAWNWOOD_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
