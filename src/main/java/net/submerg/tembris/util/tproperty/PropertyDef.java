@@ -1,4 +1,4 @@
-package net.submerg.tembris.util.properties;
+package net.submerg.tembris.util.tproperty;
 
 import net.minecraft.network.chat.Component;
 

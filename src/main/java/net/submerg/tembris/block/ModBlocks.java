@@ -15,6 +15,7 @@ import net.submerg.tembris.block.custom.*;
 import net.submerg.tembris.item.ModItems;
 import net.submerg.tembris.worldgen.tree.DawnwoodTreeGrower;
 
+import java.util.Map;
 import java.util.function.Supplier;
 
 // TODO implement Properties system
@@ -41,7 +42,11 @@ public class ModBlocks {
 
     // TODO add dawnstone decorative blocks
     public static final RegistryObject<Block> DAWNSTONE = registerBlock("dawnstone",
-        () -> new DawnstoneBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
+        () -> new DawnstoneBlock(Map.ofEntries(
+                Map.entry("amb_accumulation", 10d),
+                Map.entry("max_throughput", 10d),
+                Map.entry("max_capacity", 10d)
+        ), BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> COBBLED_DAWNSTONE = registerBlock("cobbled_dawnstone",
         () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     // Machines

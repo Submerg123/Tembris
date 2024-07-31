@@ -1,10 +1,10 @@
-package net.submerg.tembris.util.properties;
+package net.submerg.tembris.util.tproperty;
 
 import net.minecraft.network.chat.Component;
 
 import java.util.Map;
 
-public class PropertyMaterial {
+public class TProperties {
     public static final PrefixScalingSystem<Double> SI_SCALING_SYSTEM = new PrefixScalingSystem<>(
             Map.entry(10e12, "T"), Map.entry(10e9, "G"), Map.entry(10e6, "M"),
             Map.entry(10e3, "k"), Map.entry(1d, ""), Map.entry(10e-3, "m"),

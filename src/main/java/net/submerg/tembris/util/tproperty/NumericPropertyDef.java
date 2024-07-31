@@ -1,4 +1,4 @@
-package net.submerg.tembris.util.properties;
+package net.submerg.tembris.util.tproperty;
 
 import net.minecraft.network.chat.Component;
 
@@ -17,7 +17,7 @@ public class NumericPropertyDef<N extends Number> extends PropertyDef<N> {
         super(name);
 
         this.symbol = symbol;
-        this.scalingSystem = PropertyMaterial.SI_SCALING_SYSTEM;
+        this.scalingSystem = TProperties.SI_SCALING_SYSTEM;
     }
 
     @Override
