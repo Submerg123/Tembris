@@ -17,12 +17,20 @@ import net.submerg.tembris.item.ModCreativeModeTabs;
 import net.submerg.tembris.item.ModItems;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
+// <------------------------------------------------------------------------------>
+// The following describes the idiosyncratic conventions of this mod's Doc comments.
+//
+// The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
+// "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this mod's Doc Comments
+// are to be interpreted as described in RFC 2119.
+//
+// The capitalization of various terms is simply a personal preference.
+//
+// The term "Implementer" in the documentation of Interfaces refers to a class
+// which is Implementing the Interface.
 @Mod(Tembris.MOD_ID)
 public class Tembris {
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "tembris";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public Tembris() {

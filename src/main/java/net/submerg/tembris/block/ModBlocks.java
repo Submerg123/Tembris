@@ -26,7 +26,7 @@ public class ModBlocks {
 
     //  TODO add dawnwood decorative blocks
     public static final RegistryObject<Block> DAWNWOOD_LOG = registerBlock("dawnwood_log",
-            () -> new WoodLikeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+            () -> new DawnwoodBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> DAWNWOOD_WOOD = registerBlock("dawnwood_wood",
             () -> new WoodLikeBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
     public static final RegistryObject<Block> STRIPPED_DAWNWOOD_LOG = registerBlock("stripped_dawnwood_log",
@@ -42,11 +42,7 @@ public class ModBlocks {
 
     // TODO add dawnstone decorative blocks
     public static final RegistryObject<Block> DAWNSTONE = registerBlock("dawnstone",
-        () -> new DawnstoneBlock(Map.ofEntries(
-                Map.entry("amb_accumulation", 10d),
-                Map.entry("max_throughput", 10d),
-                Map.entry("max_capacity", 10d)
-        ), BlockBehaviour.Properties.copy(Blocks.STONE)));
+        () -> new DawnstoneBlock(BlockBehaviour.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<Block> COBBLED_DAWNSTONE = registerBlock("cobbled_dawnstone",
         () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE)));
     // Machines

@@ -12,25 +12,34 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 import java.util.Map;
 
-public  abstract class PropertyBlock extends Block {
-    public Map<String, ?> PROPERTIES;
+/**
+ * <!----------------------------------------------------------------------------->
+ * A Block which implements the TProperty system.
+ * <p>
+ * All Implementers MUST define a Public Static Field called {@code PROPERTIES} of
+ * type {@code Map<String, ?>}.  {@code PROPERTIES} defines the values of the
+ * Implementer's TProperties.  The Keys are Strings representing the internal names
+ * of the TProperties (as defined by {@link TProperties#PROPERTY_DEFS}) and the
+ * Values are Objects of the appropriate type for the corresponding TProperty (also
+ * as defined by {@code TProperties.PROPERTY_DEFS}).  See
+ * {@code TProperties.PROPERTY_DEFS} for more information on TProperties.  If
+ * {@code PROPERTIES} is not defined, {@link #generateTooltip(Map, List)} will
+ * raise an Error. {@code PROPERTIES} SHOULD be accessed via the Getter Method
+ * {@link #getProperties}.
+ */
+public interface PropertyBlock {
 
-    public PropertyBlock(Map<String, ?> tProperties, Properties pProperties) {
-        super(pProperties);
-        this.PROPERTIES = tProperties;
-    }
+//    public PropertyBlock(Properties pProperties) {
+//        super(pProperties);
+//    }
 
-    protected Map<String, ?> getPROPERTIES() { return this.PROPERTIES; }
+    Map<String, ?> properties();
 
-    @Override
-    public void appendHoverText(@NotNull ItemStack itemStack, @Nullable BlockGetter level,
-                                @NotNull List<Component> tooltip, @NotNull TooltipFlag isAdvanced) {
-        this.getPROPERTIES().forEach((property, value) -> {
+    static void generateTooltip(Map<String, ?> tProperties, List<Component> tooltip) {
+        tProperties.forEach((property, value) -> {
             PropertyDef<?> propertyDef = TProperties.PROPERTY_DEFS.get(property);
             tooltip.add(propertyDef.makeTooltip(value));
         });
-
-        super.appendHoverText(itemStack, level, tooltip, isAdvanced);
     }
 
     //    public static class KeywordPropertyDef extends PropertyDef {

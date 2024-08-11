@@ -1,48 +1,33 @@
 package net.submerg.tembris.block.custom;
 
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.ToolAction;
-import net.submerg.tembris.block.ModBlocks;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Map;
 
-public class DawnwoodBlock extends PropertyBlock {
-    public DawnwoodBlock(Map<String, ?> tProperties, Properties pProperties) {
-        super(tProperties, pProperties);
+public class DawnwoodBlock extends WoodLikeBlock implements PropertyBlock {
+    public DawnwoodBlock(Properties pProperties) {
+        super(pProperties);
     }
 
     @Override
-    public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return true;
+    public Map<String, ?> properties() {
+        return Map.ofEntries(
+                Map.entry("amb_accumulation", 10d),
+                Map.entry("max_throughput", 10d),
+                Map.entry("max_capacity", 10d)
+        );
     }
 
     @Override
-    public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return 5;
-    }
-
-    @Override
-    public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return 5;
-    }
-
-    @Override
-    public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context, ToolAction toolAction, boolean simulate) {
-        if (context.getItemInHand().getItem() instanceof AxeItem) {
-            if (state.is(ModBlocks.DAWNWOOD_LOG.get())) {
-                return ModBlocks.STRIPPED_DAWNWOOD_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-            }
-            if (state.is(ModBlocks.DAWNWOOD_WOOD.get())) {
-                return ModBlocks.STRIPPED_DAWNWOOD_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-            }
-
-        }
-        return super.getToolModifiedState(state, context, toolAction, simulate);
+    public void appendHoverText(@NotNull ItemStack itemStack, @Nullable BlockGetter level,
+                                @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
+        PropertyBlock.generateTooltip(this.properties(), tooltip);
+        super.appendHoverText(itemStack, level, tooltip, flag);
     }
 }
